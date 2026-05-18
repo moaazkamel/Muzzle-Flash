@@ -85,3 +85,10 @@ func _setup_path_timer() -> void:
 			
 			
 		await get_tree().create_timer(0.3).timeout
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	
+	if body.is_in_group('player'):
+		body.damage()	
+	pass # Replace with function body.
